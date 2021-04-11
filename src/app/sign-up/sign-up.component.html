@@ -1,0 +1,33 @@
+
+<form (ngSubmit)="submit()" #f="ngForm">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" name="name" ngModel required [(ngModel)]="name">
+    </div>
+    <div ngModelGroup="contacts" class="group" #contacts="ngModelGroup">
+      Contacts:
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" class="form-control" name="email" ngModel email required #email="ngModel" [(ngModel)]="contacts.email">
+      </div>
+      <div class="form-group">
+        <label for="Phone">Phone:</label>
+        <input type="text" class="form-control" name="phone" ngModel required minlength="10" maxlength="10" [(ngModel)]="contacts.phone">
+      </div>
+    </div>
+      <span class="help-block errors" *ngIf="contacts.invalid && contacts.touched">Either Email or Phone is not valid</span>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" name="pwd" ngModel required>
+    </div>
+    <div class="form-group">
+        <label for="cpwd">Confirm Password:</label>
+        <input type="password" class="form-control" name="cpwd" ngModel required>
+      </div>
+    <button [disabled]="f.invalid" type="submit" class="btn btn-default">Submit</button>
+    <p *ngIf="f.valid">
+      {{name}}, your email id is: {{contacts.email}} and phone number is:{{contacts.phone}}
+    </p>
+    <input *ngIf="f.valid" type="checkbox"><p *ngIf="f.valid">Confirm the declaration</p>
+  </form>
+  

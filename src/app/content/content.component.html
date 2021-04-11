@@ -1,0 +1,31 @@
+<!--<p *ngIf="show">This is to check the ngIf Directive</p>
+<table>
+    <tr *ngFor="let e1 of emps">
+        <td>{{e1.empId}}</td>
+        <td>{{e1.empName}}</td>
+        <td>{{e1.empSalary}}</td>
+    </tr>
+</table>
+<p [ngClass]="{'forbg':show}">This is to see Styles</p>
+<input type="text" #txt [(ngModel)]="text">
+<input type="text"  name="txt1">
+<button (click)="setValue(txt.value)">SetValue</button>
+<p *ngIf="show">This is to check the ngIf Directive</p>
+From Html to TS{{text}}
+<br/>
+<h1>Content Heading</h1>
+<button (click)="transfer()">Transfer</button>
+{{cn}}<br/>
+{{empId | fetchCode:7}}
+<table>
+    <tr *ngFor="let temp of users">
+        <td> {{temp.userid}} </td>
+        <td> {{temp.username}} </td>
+    </tr>
+</table>-->
+<h1>Content Works</h1>
+<button (click)="transferValue()">Transfer</button>
+<app-home *ngIf="t" [valFromContent]="transferVal"></app-home>
+<!--<button (click)="showNavigated()">Sign In</button>
+<button (click)="showSignUp()">Sign Up</button>-->
+<router-outlet></router-outlet>

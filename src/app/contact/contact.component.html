@@ -1,0 +1,11 @@
+<p>contact works!</p>
+
+<div *ngIf="showQuestion">
+    Div Tag
+</div>
+Enter Id <input type="text" [(ngModel)]="id">
+<button (click)="getProcess()">GetAll</button>
+<button (click)="getProcessforId()">GetId</button>
+<button (click)="postProcess()">Add</button>
+<button (click)="putProcess()">Update</button>
+<button (click)="deleteProcess()">Delete</button>

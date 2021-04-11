@@ -1,0 +1,44 @@
+
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Bootstrap Sidebar</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <p>Dummy Heading</p>
+            <li>
+                <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" (click)="sentToService('Home')" routerLink="/home" routerLinkActive="active">Home</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="#" >Home</a>
+                    </li>                      
+                </ul>
+            </li>
+            <li>
+                <a (click)="sentToService('About')" [routerLink]="['/about',code]" routerLinkActive="active">About</a>
+            </li>
+            <li>
+                <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" (click)="sentToService('SignIn')" routerLink="/signin" routerLinkActive="active">Sign In</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Page 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a  (click)="sentToService('SignUp')"  routerLink="/signup" routerLinkActive="active">Sign Up</a>
+            </li>
+            <li>
+                <a (click)="sentToService('Contact')" routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [queryParams]="{'ques':'false'}">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+

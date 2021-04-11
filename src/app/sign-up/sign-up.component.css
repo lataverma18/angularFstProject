@@ -1,0 +1,13 @@
+.errors
+{
+    color:red;
+}
+input.ng-invalid.ng-touched
+{
+    border: 1px solid red;
+}
+.group
+{
+    border:1px solid gray;
+    padding: 10px;
+}
