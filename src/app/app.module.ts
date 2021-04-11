@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { FetchCodePipe } from './fetch-code.pipe';
 import { RoutingModule } from './routing/routing.module';
 import { HomeComponent } from './home/home.component';
+import { TryComponent } from './try/try.component';
 
 
 
@@ -25,7 +26,9 @@ import { HomeComponent } from './home/home.component';
     
     NavbarComponent,
     
-    FetchCodePipe 
+    FetchCodePipe,
+    
+    TryComponent 
   ],
   imports: [
     BrowserModule,
